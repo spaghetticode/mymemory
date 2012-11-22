@@ -25,9 +25,9 @@ Or install it yourself as:
 
 ## Usage
 ```ruby
-  text = 'hello world'
+  text = 'a rose for Emily'
   Mymemory.translate(text, :from => :en, :to => :it)
-  # => 'ciao mondo'
+  # => 'una rosa per Emily'
 ```
 The ```from => :en``` key is optional as long as the original language is english.
 
