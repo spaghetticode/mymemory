@@ -16,8 +16,9 @@ Gem::Specification.new do |gem|
   gem.version       = Mymemory::VERSION
 
   gem.add_dependency 'rake'
+  gem.add_dependency 'httparty'
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'guard-rspec'
-  gem.add_development_dependency 'pry'
   gem.add_development_dependency 'vcr'
+  gem.add_development_dependency 'fakeweb'
 end

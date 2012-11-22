@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://mymemory.translated.net/api/get?q=Wasn't%20born%20to%20Follow&langpair=en%7Cit
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 22 Nov 2012 09:38:27 GMT
+      server:
+      - Apache/2.2.16 (Debian) PHP/5.4.5-1~dotdeb.0 mod_python/3.3.1 Python/2.6.6
+        mod_ssl/2.2.16 OpenSSL/0.9.8o
+      x-powered-by:
+      - PHP/5.4.5-1~dotdeb.0
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      x-backend-content-length:
+      - '10'
+      x-embedded-status:
+      - '200'
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - '0'
+      access-control-allow-origin:
+      - ''
+      vary:
+      - User-Agent,Accept-Encoding
+      content-length:
+      - '3545'
+      connection:
+      - close
+      content-type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"responseData":{"translatedText":"Non era nato per seguire"},"responseDetails":"","responseStatus":200,"matches":[{"id":"0","segment":"Wasn''t
+        born to Follow","translation":"Non era nato per seguire","quality":"70","reference":"Machine
+        Translation provided by Google, Microsoft, Worldlingo or MyMemory customized
+        engine.","usage-count":1,"subject":"All","created-by":"MT!","last-updated-by":null,"create-date":"2012-11-22","last-update-date":"2012-11-22","match":0.85},{"id":"5593788","segment":"SIGNATURES
+        FOLLOW","translation":"SEGUONO FIRME","quality":"0","reference":"","usage-count":1,"subject":"Science","created-by":"rprosser","last-updated-by":null,"create-date":"2006-11-27
+        16:19:25","last-update-date":"2006-11-27 16:19:25","match":0.37},{"id":"260745485","segment":"Follow
+        use instructions on the label.","translation":"Seguire le istruzioni sull\u2019etichetta.","quality":"74","reference":"","usage-count":1,"subject":"Marketing","created-by":"curro","last-updated-by":null,"create-date":"2006-05-16
+        16:18:51","last-update-date":"2006-05-16 16:18:51","match":0.25},{"id":"260746461","segment":"Follow
+        with Firming Facial Peel Off Mask.","translation":"Quindi applicare la maschera
+        facciale rassodante.","quality":"0","reference":"","usage-count":1,"subject":"Marketing","created-by":"curro","last-updated-by":null,"create-date":"2008-01-15
+        19:09:45","last-update-date":"2008-01-15 19:09:45","match":0.22},{"id":"233444728","segment":"One
+        morning she woke up and her notebook wasn''t working.","translation":"Una
+        mattina si sveglia e il suo notebook non si accende.","quality":"0","reference":"","usage-count":2,"subject":"Computer_Science","created-by":"","last-updated-by":null,"create-date":"2009-02-16
+        14:22:01","last-update-date":"2009-02-16 14:22:01","match":0.18},{"id":"428932346","segment":"I
+        wanted to get out on the tenth floor. It wasn '' t on.","translation":"Volevo
+        scendere al decimo piano: non ci sono riuscita.","quality":"","reference":"http:\/\/www.europarl.europa.eu\/|@|http:\/\/www.europarl.europa.eu\/","usage-count":1,"subject":"Social_Science","created-by":"MyMemoryLoader","last-updated-by":null,"create-date":"2012-03-23
+        16:52:56","last-update-date":"2012-03-23 16:52:56","match":0.16},{"id":"1046047","segment":"1
+        The offer in the ad wasnrquote t at all appealing","translation":"1 Lrquote
+        offerta della pubblicit\u00e0 non era affatto attraente","quality":"0","reference":"","usage-count":1,"subject":"Marketing","created-by":"curro","last-updated-by":null,"create-date":"1970-01-01
+        00:59:59","last-update-date":"1970-01-01 00:59:59","match":0.15},{"id":"5591807","segment":"Project
+        results to date are as follows:","translation":"I risultati finora ottenuti
+        dal progetto sono i seguenti:","quality":"0","reference":"","usage-count":1,"subject":"Science","created-by":"rprosser","last-updated-by":null,"create-date":"2006-09-19
+        13:37:10","last-update-date":"2006-09-19 13:37:10","match":0.08},{"id":"426707368","segment":"Perhaps,
+        Mr Schnellhardt, you are right that it wasn'' t totally practical, it wasn''
+        t perfect, it wasn'' t quite right.","translation":"Non nego, onorevole Schnellhardt,
+        che forse abbiamo emanato una legislazione non completamente applicabile,
+        non proprio perfetta, non assolutamente inappuntabile.","quality":"","reference":"http:\/\/www.europarl.europa.eu\/|@|http:\/\/www.europarl.europa.eu\/","usage-count":1,"subject":"Social_Science","created-by":"MyMemoryLoader","last-updated-by":null,"create-date":"2012-02-29
+        11:37:34","last-update-date":"2012-02-29 11:37:34","match":0.06}]}'
+    http_version: '1.1'
+  recorded_at: Thu, 22 Nov 2012 09:38:28 GMT
+recorded_with: VCR 2.0.1
