@@ -1,24 +1,35 @@
 # Mymemory
 
-TODO: Write a gem description
+A (very) basic wrapper on mymemory.com translation resful API. See the
+[mymemory website](http://mymemory.translated.net/doc/spec.php) for usage
+constraints.
+
 
 ## Installation
 
 Add this line to your application's Gemfile:
-
-    gem 'mymemory'
+```bash
+  gem 'mymemory'
+```
 
 And then execute:
-
-    $ bundle
+```bash
+  $ bundle
+```
 
 Or install it yourself as:
+```bash
+  gem install mymemory
+```
 
-    $ gem install mymemory
 
 ## Usage
-
-TODO: Write usage instructions here
+```ruby
+  text = 'hello world'
+  Mymemory.translate(text, :from => :en, :to => :it)
+  # => 'ciao mondo'
+```
+The ```from => :en``` key is optional as long as the original language is english.
 
 ## Contributing
 
