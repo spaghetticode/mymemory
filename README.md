@@ -1,5 +1,7 @@
 # Mymemory
 
+[![Build Status](https://secure.travis-ci.org/spaghetticode/mymemory.png)](http://travis-ci.org/spaghetticode/mymemory)
+
 A (very) basic wrapper on mymemory.com translation resful API. See the
 [mymemory website](http://mymemory.translated.net/doc/spec.php) for usage
 constraints.
