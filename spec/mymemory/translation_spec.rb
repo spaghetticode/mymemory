@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Mymemory
   describe Translation do
-    let(:subject) { Translation.new('hello', :to => :it) }
+    let(:subject) { Translation.new('hello world', :to => :it) }
 
     it 'source language defaults to english' do
       subject.from.should == :en
@@ -14,16 +14,9 @@ module Mymemory
       end
     end
 
-    describe '#escaped_text' do
-      it 'escapes not allowed characters' do
-        subject.text = 'some text'
-        subject.escaped_text.should == 'some%20text'
-      end
-    end
-
     describe '#url' do
-      it 'builds expected url' do
-        url = 'http://mymemory.translated.net/api/get?q=hello&langpair=en|it'
+      it 'correctly encodes the url' do
+        url = 'http://mymemory.translated.net/api/get?q=hello%20world&langpair=en%7Cit'
         subject.url.should == url
       end
     end
@@ -33,6 +26,26 @@ module Mymemory
         expect do
           Translation.new('white rabbit', :from => :en)
         end.to raise_error(LanguageMissingError)
+      end
+    end
+
+    describe '#parsed_response' do
+      context 'request was successful' do
+        let(:response) { double(:code => 200, :body => '{"some": {"cute": "json"}}') }
+
+        it 'returns an hash from parsed json' do
+          subject.stub(:response => response)
+          subject.parsed_response.should == {'some' => {'cute' => 'json'}}
+        end
+      end
+
+      context 'when request was not successful' do
+        let(:response) { double(:code => 422, :body => 'whatever!') }
+
+        it 'returns an empty hash' do
+          subject.stub(:response => response)
+          subject.parsed_response.should == {}
+        end
       end
     end
   end

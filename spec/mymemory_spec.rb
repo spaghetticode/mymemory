@@ -1,9 +1,11 @@
 require 'spec_helper'
 
 describe Mymemory do
-  it 'returns expected translation' do
-    text = 'hello world'
-    result = Mymemory.translate(text, :from => :en, :to => :it)
-    result.should == 'ciao mondo'
+  context 'when making external API calls', :vcr do
+    it 'returns expected translation' do
+      text = "Wasn't born to Follow"
+      result = Mymemory.translate(text, :from => :en, :to => :it)
+      result.should == 'Non era nato per seguire'
+    end
   end
 end
