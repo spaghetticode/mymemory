@@ -31,7 +31,7 @@ Or install it yourself as:
   Mymemory.translate(text, :from => :en, :to => :it)
   # => 'una rosa per Emily'
 ```
-The ```from => :en``` key is optional as long as the original language is english.
+The ```:from => :en``` pair is optional as long as the original language is english.
 
 ## Contributing
 
