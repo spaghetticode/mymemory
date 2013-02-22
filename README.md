@@ -33,6 +33,18 @@ Or install it yourself as:
 ```
 The ```:from => :en``` pair is optional as long as the original language is english.
 
+
+## Configuration
+
+It's totally optional, but providing an email currently gives you extra free translations.
+To set the email parameter:
+```ruby
+  Mymemory.config.email = 'info@example.com'
+```
+This will add `&de=info@example.com` to the query url.
+
+
+
 ## Contributing
 
 1. Fork it
