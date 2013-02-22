@@ -1,8 +1,13 @@
 require 'open-uri'
 require 'mymemory/version'
 require 'mymemory/translation'
+require 'active_support/configurable'
 
 module Mymemory
+    include ActiveSupport::Configurable
+
+    config_accessor :email
+
     class LanguageMissingError < Exception
     def message
       'please provide a target language value'

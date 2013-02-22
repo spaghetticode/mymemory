@@ -18,6 +18,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'rake'
   gem.add_dependency 'json'
   gem.add_dependency 'httparty'
+  gem.add_dependency 'activesupport'
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'guard-rspec'
   gem.add_development_dependency 'vcr'

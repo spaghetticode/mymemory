@@ -14,11 +14,15 @@ module Mymemory
     end
 
     def url
-      URI.escape("#{BASE_URL}?q=#{text}&langpair=#{lang_pair}")
+      URI.escape("#{BASE_URL}?q=#{text}&langpair=#{lang_pair}#{email_key}")
     end
 
     def lang_pair
       [from, to].join('|')
+    end
+
+    def email_key
+      "&de=#{config_email}"
     end
 
     def translated_text
@@ -33,6 +37,10 @@ module Mymemory
 
     def response
       @response ||= HTTParty.get(url)
+    end
+
+    def config_email
+      Mymemory.config.email
     end
   end
 end
