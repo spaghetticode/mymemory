@@ -22,7 +22,7 @@ module Mymemory
     end
 
     def email_key
-      "&de=#{config_email}"
+      config_email && "&de=#{config_email}"
     end
 
     def translated_text

@@ -19,6 +19,17 @@ module Mymemory
         url = 'http://mymemory.translated.net/api/get?q=hello%20world&langpair=en%7Cit'
         subject.url.should == url
       end
+
+      context 'when email address is present in configuration' do
+        let(:email) { 'info@example.com' }
+
+        before { Mymemory.config.email = email }
+        after  { Mymemory.config.email = nil }
+
+        it 'appends the email param to the url' do
+          subject.url.should =~ /de=#{email}$/
+        end
+      end
     end
 
     context 'when the target language is missing' do
